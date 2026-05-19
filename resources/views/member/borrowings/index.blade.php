@@ -40,7 +40,7 @@
                             <!-- Status Indicator Line -->
                             @php
                                 $statusColor = 'bg-gray-400';
-                                if($borrowing->status === 'pending') $statusColor = 'bg-amber-400';
+                                if($borrowing->status === 'pending') $statusColor = 'bg-yellow-500';
                                 if($borrowing->status === 'approved') $statusColor = 'bg-blue-500';
                                 if($borrowing->status === 'borrowed') $statusColor = 'bg-indigo-500';
                                 if($borrowing->status === 'overdue') $statusColor = 'bg-rose-500';
@@ -70,7 +70,7 @@
                                     <div class="flex items-center justify-between">
                                         <span class="text-gray-500 dark:text-slate-400">Status</span>
                                         <span class="font-medium px-2.5 py-0.5 rounded-full text-xs
-                                            @if($borrowing->status === 'pending') bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-400
+                                            @if($borrowing->status === 'pending') bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-400
                                             @elseif($borrowing->status === 'approved') bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-400
                                             @elseif($borrowing->status === 'borrowed') bg-indigo-100 text-indigo-800 dark:bg-indigo-500/20 dark:text-indigo-400
                                             @elseif($borrowing->status === 'overdue') bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-400
@@ -154,9 +154,9 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     @if($item->status === 'returned')
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-400">Dikembalikan</span>
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-500/20 dark:text-gray-400">Dikembalikan</span>
                                     @elseif($item->status === 'rejected')
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-500/20 dark:text-gray-400">Ditolak</span>
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-600/20 dark:text-red-500">Ditolak</span>
                                     @endif
                                 </td>
                             </tr>
