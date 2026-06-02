@@ -8,16 +8,7 @@
   },
   "routes": [
     {
-      "src": "/build/(.*)",
-      "dest": "/public/build/"
-    },
-    {
-      "src": "/favicon\\.ico",
-      "dest": "/public/favicon.ico"
-    },
-    {
-      "src": "/robots\\.txt",
-      "dest": "/public/robots.txt"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
