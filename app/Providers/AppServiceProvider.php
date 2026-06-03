@@ -16,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
     # Bootstrap any application services
     public function boot(): void
     {
+        if (env('APP_ENV') !== 'local') {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+        
         \Illuminate\Support\Facades\Blade::component('layouts.member', 'member-layout');
         \Illuminate\Support\Facades\Blade::component('layouts.admin', 'admin-layout');
         \Illuminate\Support\Facades\Blade::component('layouts.public', 'public-layout');
