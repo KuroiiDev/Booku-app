@@ -4,6 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "vercel-build": "echo 'Skipping build on Vercel, using committed assets'",
         "dev": "vite"
     },
     "devDependencies": {
